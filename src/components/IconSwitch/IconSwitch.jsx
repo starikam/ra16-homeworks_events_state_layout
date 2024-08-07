@@ -1,13 +1,20 @@
 import './IconSwitch.css'
+import PropTypes from 'prop-types'
 
-const IconSwitch = ({icon, onSwitch}) => {
-
-    return (
-        <i className="material-icons" onClick={onSwitch}>
+export const IconSwitch = ({ icon,  onSwitch }) => {
+  return (
+    <div className="store_header">
+        <div className="store_menu">
+        <button className="store_btn material-icons"
+            onClick={onSwitch}>
             {icon}
-        </i>
-    )
-
+        </button>
+        </div>
+    </div>
+  )
 }
 
-export default IconSwitch
+IconSwitch.propTypes = {
+  icon: PropTypes.string,
+  onSwitch: PropTypes.func
+}

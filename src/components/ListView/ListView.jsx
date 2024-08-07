@@ -1,14 +1,20 @@
-import ShopItem from "./ShopItem"
+import { ShopItem } from "../ShopItem"
 import './ListView.css'
+import PropTypes from 'prop-types'
 
-const ListView = ({cards}) => {
-
+export const ListView = ({ items }) => {
     return (
-        <div className="cards-list">
-        {cards.map(card => {return <ShopItem card ={card}/>})}
+        <div className="container_list">
+            <article className='cards_list'>
+                {items.map((card, index) => {
+                    return <ShopItem card={card} key={index} />
+                })
+            }
+            </article>
         </div>
     )
-
 }
 
-export default ListView
+ListView.propTypes = {
+    items: PropTypes.array.isRequired
+  }

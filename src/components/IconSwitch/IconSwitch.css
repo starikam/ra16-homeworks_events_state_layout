@@ -1,10 +1,21 @@
-.material-icons {
-    color: grey;
-    margin-left: 90%;
-    margin-top: 1rem;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); /*Иконка из библиотеки material icons*/
+
+.store_header {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0;
+    justify-content: flex-end;
 }
 
-.material-icons:hover {
+.store_btn {
+    font-size: 40px;
+    color: #a8a7a7;
+  }
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    color: darkgrey;
 }

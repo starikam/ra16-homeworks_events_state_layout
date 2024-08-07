@@ -1,13 +1,18 @@
-import ShopCard from "./ShopCard"
+import { ShopCard } from "../ShopCard"
 import './CardsView.css'
+import PropTypes from 'prop-types'
 
-const CardView = ({cards}) => {
-
+export const CardsView = ({ cards }) => {
     return (
-        <div className="cards">
-        {cards.map(card => {return <ShopCard card ={card}/>})}
+        <div className="container">
+            {cards.map((card, index) => {
+                return <ShopCard card={card} key={index} />
+            })
+            }
         </div>
     )
 }
 
-export default CardView
+CardsView.propTypes = {
+    cards: PropTypes.array.isRequired,
+  }
